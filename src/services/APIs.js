@@ -6,4 +6,8 @@ export const authEndpoints = {
   LOGIN_API: BASE_URL + "auth/google/callback",
 }
 
+export const userEndpoints={
+  REGISTER_API:(eventId)=>`${BASE_URL}user/register/${eventId}`,
+  EVENTS_API:BASE_URL+"event/getAllEvents",
+}
 

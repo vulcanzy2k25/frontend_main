@@ -27,7 +27,8 @@ const Login = () => {
         <p className="mt-4 font-exo font-bold text-lg sm:text-2xl text-title max-w-2xl drop-shadow-md">
           VELORA : VEIL OF ETERNAL LIGHT
         </p>
-        <div className="rounded-xl flex text-white flex-col justify-around items-center bg-gradient-to-br from-[#000000] to-[#666666] p-4   sm:w-[30rem]  h-[15rem] mt-10 absolute">
+
+        <div className="rounded-xl flex text-white flex-col justify-around items-center backdrop-blur-md bg-gradient-to-br from-[#000000]/70 to-[#120226]/80 p-4   sm:w-[30rem]  h-[15rem] mt-10 absolute">
           <button>
             <IoCloseOutline
               onClick={() => navigate("/")}

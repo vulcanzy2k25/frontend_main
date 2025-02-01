@@ -10,7 +10,7 @@ export default function Layout() {
   const shouldShowNavBar = !hideNavBarRoutes.includes(location.pathname);
 
   return (
-    <div className="h-screen min-h-[40rem] overflow-clip flex items-center">
+    <div className="   ">
       {/* Conditionally render the NavBar */}
       {shouldShowNavBar && <NavBar />}
 

@@ -9,7 +9,7 @@ import Team from "./pages/Team";
 import Login from "./pages/Login";
 import OAuthCallback from "./pages/OAuthCallback";
 import { Navigate } from "react-router-dom";
-
+import Profile from "./pages/Profile";
 const routes = [
   {
     path: "/",
@@ -22,6 +22,7 @@ const routes = [
       { path: "/sponsors", element: <Sponsors /> },
       { path: "/team", element: <Team /> },
       {path: "/login", element: <Login />},
+      {path: "/profile", element: <Profile />},
       {path: "/auth/callback", element: <OAuthCallback />},      
       { path: "*", element: <Navigate to="/" replace /> }, // Redirect unknown routes
     ],
