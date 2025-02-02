@@ -19,7 +19,7 @@ export default function App() {
         start: "top -2%",
         end: "top -300%",
         pin: true,
-        markers: true,
+        // markers: true,
         scrub: 0.5,
         anticipatePin: 1,
         snap: {

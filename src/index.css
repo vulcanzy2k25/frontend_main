@@ -26,7 +26,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('https://fonts.gstatic.com/s/syne/v1/8QIQdiG5jN0pJZ8rIcA.woff2') format('woff2');
+  /* src: url('https://fonts.gstatic.com/s/syne/v1/8QIQdiG5jN0pJZ8rIcA.woff2') format('woff2'); */
 }
 
 @font-face {
@@ -34,7 +34,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('https://fonts.gstatic.com/s/syne/v1/8QIQdiG5jN0pJZ8rIcA.woff2') format('woff2');
+  /* src: url('https://fonts.gstatic.com/s/syne/v1/8QIQdiG5jN0pJZ8rIcA.woff2') format('woff2'); */
 }
 
 

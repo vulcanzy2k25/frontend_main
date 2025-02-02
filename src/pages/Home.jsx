@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import SpEvents from "../components/SpEvents";
+// import { Link } from "react-router-dom";
+// import SpEvents from "../components/SpEvents";
 import logo from '../assets/images/NITAP 1.svg'
 export default function Home() {
   return (
     <>
-    <div className="h-screen bg-home bg-cover bg-center min-h-[40rem]  flex items-center justify-center pb-20 sm:pb-0 sm:pl-20   max-h-max ">
+    <div className="h-screen bg-home bg-cover bg-center min-h-[40rem]  flex items-center justify-center pb- sm:pb-0 sm:pl-20   max-h-max ">
       <div className="absolute inset-0 bg-black/30  backdrop-blur-[1px]"></div>
       <div className="flex absolute top-5  right-5 items-center gap-2 bg-black/50 p-2 rounded-xl backdrop-blur-sm"> 
         <img src={logo} alt="" className="w-[2.5rem] sm:w-[4.5rem]"/>
@@ -25,17 +25,17 @@ export default function Home() {
         <p className="mt-4 font-exo font-bold text-lg sm:text-2xl text-title max-w-2xl drop-shadow-md">
           VELORA : VEIL OF ETERNAL LIGHT
         </p>
-      <div>
+      {/* <div className="absolute -bottom-[2rem]">
         <Link to="/login">
         <button className="text-xl text-black bg-title p-1 rounded-2xl font-syne px-5  mt-10">
           Register
         </button>
         </Link>
-      </div>
+      </div> */}
       </div>
      
     </div>
-<SpEvents/>
+{/* <SpEvents/> */}
     </>
   );
 }
