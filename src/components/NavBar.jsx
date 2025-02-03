@@ -23,7 +23,7 @@ export default function NavBar() {
   return (
     <div className="h-screen w-3 flex items-center fixed z-10">  
 
-    <div className="fixed z-10 bottom-0 sm:bottom-auto sm:left-10 bg-black flex sm:flex-col items-center justify-around w-full p-1 sm:p0 sm:w-[4rem] sm:h-[30rem] rounded-xl ">
+    <div className="fixed z-10 bottom-0 sm:bottom-auto sm:left-10 bg-black flex sm:flex-col items-center justify-around w-full p-1 sm:p0 sm:w-[4rem] sm:h-[30rem] rounded-t-xl sm:rounded-xl ">
       {navItems.map((item, index) => (
         <Link to={item.path} key={index} className="w-full">
           <li

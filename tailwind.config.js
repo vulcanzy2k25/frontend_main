@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens:{
+        cd:'1050px'
+      },
       colors:{
         title:"#FFAA00"
       },

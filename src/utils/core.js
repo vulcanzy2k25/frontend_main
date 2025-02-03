@@ -1,5 +1,5 @@
 // import nayeem from "../assets/core/Nayeem.png";
-import nayeem from '../assets/core/na.jpg'
+import nayeem from "../assets/core/na.jpg";
 import mm from "../assets/core/mm.jpeg";
 import vk from "../assets/core/vk.jpeg";
 import vr from "../assets/core/vr.jpeg";
@@ -9,7 +9,7 @@ import veee from "../assets/core/veee.jpg";
 import gr from "../assets/core/gr.jpg";
 import vg from "../assets/core/vg.jpg";
 import sp from "../assets/core/sp.jpg";
-import wgt from '../assets/core/wg.JPG'
+import wgt from "../assets/core/wg.JPG";
 // export const webTeamData = [
 //   {
 //     pic: nayeem,
@@ -72,7 +72,7 @@ import wgt from '../assets/core/wg.JPG'
 export const teamData = {
   Core: [
     {
-      name: "Archana",
+      name: "Archana Manjunath",
       pic: arc,
       role: "vulcanzy Secretary",
     },
@@ -86,15 +86,16 @@ export const teamData = {
       pic: vg,
       role: "Sponsorship Secretary",
     },
-    {
-      name: "Nayeem",
-      pic: nayeem,
-      role: "Web Dev Secretary",
-    },
+
     {
       name: "Vikas Reddy",
       pic: vr,
       role: "Technical Secretary",
+    },
+    {
+      name: "Nayeem",
+      pic: nayeem,
+      role: "Web Dev Secretary",
     },
     {
       name: "Surya Pavan",
@@ -103,20 +104,11 @@ export const teamData = {
     },
 
     {
-      name: "Maruthi Mahesh",
-      pic: mm,
-      role: "Stalls and Activities Secretary",
-    },
-    {
       name: "Vijay krishna",
       pic: vk,
       role: "Security Team Secretary",
     },
-    {
-      name: "Vikas P",
-      pic: veee,
-      role: "Stage Operations Secretary",
-    },
+
     {
       name: "Ganesh T",
       pic: wgt,
@@ -126,6 +118,16 @@ export const teamData = {
       name: "Harsha Vardhan Chintala",
       pic: hv,
       role: "Hospitality Secretary",
+    },
+    {
+      name: "Maruthi Mahesh",
+      pic: mm,
+      role: "Stalls and Activities Secretary",
+    },
+    {
+      name: "Vikas P",
+      pic: veee,
+      role: "Stage Operations Secretary",
     },
   ],
 };
