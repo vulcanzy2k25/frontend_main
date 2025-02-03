@@ -33,7 +33,7 @@ const Login = () => {
             <IoCloseOutline
               onClick={() => navigate("/")}
               size={30}
-              className="absolute top-5 right-5 scale-75 sm:scale-100 text-"
+              className="absolute top-5 right-5 scale-75 sm:scale-100 text-title"
             />
           </button>
           <img src={star} className="h-[1.3rem] sm:h-[2rem]" alt="" />

@@ -67,8 +67,8 @@ export default function App() {
             style={{ width: windowWidth }}
             className="box w-[200rem] h-[100vh] bg-orange-500 font-bold text-[5rem] flex justify-center items-center"
           >
-           <p className="font-exo text-[15vw] md:text-[12vw] font-extrabold text-white">Sand Art</p>
-            <p className="absolute font-exo font-bold text-[5vw] md:text-[3vw] bottom-16 sm:bottom-3 text-white">Feb 6th</p>
+           <p className="font-exo text-[15vw] md:text-[12vw] font-extrabold text-white">Laser Show</p>
+            <p className="absolute font-exo font-bold text-[5vw] md:text-[3vw] bottom-16 sm:bottom-3 text-white">Feb 7th</p>
            </div>
 
           {/* Laser Show Section */}
@@ -76,8 +76,8 @@ export default function App() {
             style={{ width: windowWidth }}
             className="box w-[200rem] h-[100vh] bg-purple-700 font-bold text-[5rem] flex justify-center items-center text-white"
           >
-           <p className="font-exo text-[15vw] md:text-[12vw] font-extrabold text-white">Sand Art</p>
-            <p className="absolute font-exo font-bold text-[5vw] md:text-[3vw] bottom-16 sm:bottom-3 text-white">Feb 6th</p>
+           <p className="font-exo text-[15vw] md:text-[12vw] font-extrabold text-white">Meerake Band</p>
+            <p className="absolute font-exo font-bold text-[5vw] md:text-[3vw] bottom-16 sm:bottom-3 text-white">Feb 8th</p>
            </div>
 
           {/* Band Section */}
@@ -85,8 +85,8 @@ export default function App() {
             style={{ width: windowWidth }}
             className="box w-[200rem] h-[100vh] bg-red-500 font-bold text-[5rem] flex justify-center items-center text-white"
           >
-           <p className="font-exo text-[15vw] md:text-[12vw] font-extrabold text-white">Sand Art</p>
-            <p className="absolute font-exo font-bold text-[5vw] md:text-[3vw] bottom-16 sm:bottom-3 text-white">Feb 6th</p>
+           <p className="font-exo text-[15vw] md:text-[12vw] font-extrabold text-white">DJ Xandrian</p>
+            <p className="absolute font-exo font-bold text-[5vw] md:text-[3vw] bottom-16 sm:bottom-3 text-white">Feb 8th</p>
            </div>
         </div>
       </div>

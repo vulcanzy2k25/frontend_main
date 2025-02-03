@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import SpEvents from "../components/SpEvents";
 import logo from '../assets/images/NITAP 1.svg'
 export default function Home() {
@@ -25,13 +25,13 @@ export default function Home() {
         <p className="mt-4 font-exo font-bold text-lg sm:text-2xl text-title max-w-2xl drop-shadow-md">
           VELORA : VEIL OF ETERNAL LIGHT
         </p>
-      {/* <div className="absolute -bottom-[2rem]">
+      <div className="absolute -bottom-[2rem]">
         <Link to="/login">
         <button className="text-xl text-black bg-title p-1 rounded-2xl font-syne px-5  mt-10">
           Register
         </button>
         </Link>
-      </div> */}
+      </div>
       </div>
      
     </div>

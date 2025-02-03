@@ -6,7 +6,7 @@ import { MdPhotoSizeSelectActual } from "react-icons/md";
 import { FaHandshakeAngle } from "react-icons/fa6";
 import { HiUserGroup } from "react-icons/hi";
 import { Link, useLocation } from "react-router-dom";
-// import { FaUser } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 export default function NavBar() {
   const location = useLocation();
 
@@ -17,7 +17,7 @@ export default function NavBar() {
     { name: "Gallery", path: "/gallery", icon: <MdPhotoSizeSelectActual size={30} /> },
     { name: "Sponsors", path: "/sponsors", icon: <FaHandshakeAngle size={30} /> },
     { name: "Team", path: "/team", icon: <HiUserGroup size={30} /> },
-    // { name: "Profile", path: "/profile", icon: <FaUser size={30} /> },
+    { name: "Profile", path: "/profile", icon: <FaUser size={30} /> },
   ];
 
   return (

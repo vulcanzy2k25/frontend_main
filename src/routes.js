@@ -6,10 +6,11 @@ import Stay from "./pages/Stay";
 import Gallery from "./pages/Gallery";
 import Sponsors from "./pages/Sponsors";
 import Team from "./pages/Team";
-// import Login from "./pages/Login";
-// import OAuthCallback from "./pages/OAuthCallback";
+import Login from "./pages/Login";
+import OAuthCallback from "./pages/OAuthCallback";
 import { Navigate } from "react-router-dom";
-// import Profile from "./pages/Profile";
+import UpdateProfile from "./pages/UpdateProfile";
+import Profile from "./pages/Profile";
 const routes = [
   {
     path: "/",
@@ -21,9 +22,10 @@ const routes = [
       { path: "/gallery", element: <Gallery /> },
       { path: "/sponsors", element: <Sponsors /> },
       { path: "/team", element: <Team /> },
-      // {path: "/login", element: <Login />},
-      // {path: "/profile", element: <Profile />},
-      // {path: "/auth/callback", element: <OAuthCallback />},      
+      {path: "/login", element: <Login />},
+      {path: "/profile", element: <Profile />},
+      {path: "/updateProfile", element: <UpdateProfile />},
+      {path: "/auth/callback", element: <OAuthCallback />},      
       { path: "*", element: <Navigate to="/" replace /> }, // Redirect unknown routes
     ],
   },
