@@ -70,9 +70,7 @@ export async function getUser(token) {
 
     if (!response.data.status) {
       throw new Error(response.data.message);
-    }
-    console.log(response.data);
-    
+    }    
     return response.data.message; // Returns user data
   } catch (error) {
     toast.error(error.response?.data?.message || "Failed to fetch user details");
