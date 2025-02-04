@@ -44,9 +44,10 @@ export default function App() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, [windowWidth]);
+  const spRef=useRef(null)
 
   return (
-    <div className="">
+    <div className="" ref={spRef} id="spEvents">
       <div
         ref={con}
         className="bg-slate-200 overflow-x-hidden h-[100vh] flex-row"

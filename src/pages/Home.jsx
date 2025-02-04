@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import logo from "../assets/images/NITAP 1.svg";
-import SpEvents from '../components/SpEvents'
+import SpEvents from "../components/SpEvents";
+import { FaChevronCircleDown } from "react-icons/fa";
 export default function Home() {
   const { user } = useContext(AuthContext); // Get user from Context
 
@@ -11,7 +12,11 @@ export default function Home() {
       <div className="h-screen bg-home bg-cover bg-center flex items-center justify-center">
         <div className="absolute inset-0 bg-black/30 backdrop-blur-[1px]"></div>
         <div className="flex absolute top-5 right-5 items-center gap-2 bg-black/50 p-2 rounded-xl backdrop-blur-sm">
-          <img src={logo} alt="NITAP Logo" className="w-[2.5rem] sm:w-[4.5rem]" />
+          <img
+            src={logo}
+            alt="NITAP Logo"
+            className="w-[2.5rem] sm:w-[4.5rem]"
+          />
           <div className="text-gray-200 p-2 border-l-2 border-gray-100 font-exo font-medium text-sm sm:text-lg">
             <p>National Institute of Technology</p>
             <p>Andhra Pradesh</p>
@@ -37,8 +42,19 @@ export default function Home() {
             </div>
           )}
         </div>
+  
+          <FaChevronCircleDown
+          className="absolute bottom-[4rem] sm:bottom-4 text-title"
+           onClick={() => {
+            const element = document.getElementById('spEvents');
+            element?.scrollIntoView({
+              behavior: 'smooth'
+            }); 
+          }}
+            size={40}
+          />
       </div>
-      <SpEvents/>
+      <SpEvents />
     </>
   );
 }
