@@ -1,39 +1,40 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {  logout } from "../services/operations/userAPI";
 import star from "../assets/images/Star.png";
-// import toast from "react-hot-toast";
-import { useContext } from "react";
-import { AuthContext } from "../context/AuthContext";
+import toast from "react-hot-toast";
+import { getUser } from "../services/operations/userAPI";
+// import { useContext } from "react";
+// import { AuthContext } from "../context/AuthContext";
 export default function Profile() {
-  // const [user, setUser] = useState(null);
-  // const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
-  const { user } = useContext(AuthContext); // Get user from Context  
-  // useEffect(() => {
-  //   const fetchUser = async () => {
-  //     const token = localStorage.getItem("token");
+  // const { user } = useContext(AuthContext); // Get user from Context  
+  useEffect(() => {
+    const fetchUser = async () => {
+      const token = localStorage.getItem("token");
 
-  //     if (!token) {
-  //       toast.error("Authentication required!");
-  //       navigate("/login");
-  //       setLoading(false);
-  //       return;
-  //     }
+      if (!token) {
+        toast.error("Authentication required!");
+        navigate("/login");
+        setLoading(false);
+        return;
+      }
 
-  //     const userData = await getUser(token);
-  //     if (userData) {
-  //       setUser(userData);
-  //     } else {
-  //       toast.error("Failed to fetch user data.");
-  //     }
-  //     setLoading(false);
-  //   };
+      const userData = await getUser(token);
+      if (userData) {
+        setUser(userData);
+      } else {
+        toast.error("Failed to fetch user data.");
+      }
+      setLoading(false);
+    };
 
-  //   fetchUser();
-  // }, [navigate]);
+    fetchUser();
+  }, [navigate]);
 
-  if (!user) return <p className="text-title flex justify-center items-center text-4xl font-syne  bg-gradient-to-b from-black to-[#120226] h-screen">Loading...</p>;
+  if (loading) return <p className="text-title flex justify-center items-center text-4xl font-syne  bg-gradient-to-b from-black to-[#120226] h-screen">Loading...</p>;
 
   return (
     <div className="gap-5 pb-20 sm:pb-0 sm:pl-20 bg-gradient-to-b from-black to-[#120226] min-h-screen  flex flex-col p-5 items-center text-white justify-center">

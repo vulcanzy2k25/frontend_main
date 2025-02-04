@@ -1,7 +1,7 @@
 // import Brahmos from "../assets/images/sponsors/Brahmos.jpg";
 import CISB from "../assets/images/sponsors/CISB.png";
 // import Decathlon from "../assets/images/sponsors/Decathlon-Logo.png";
-import coco from "../assets/images/sponsors/coco cola.png";
+// import coco from "../assets/images/sponsors/coco cola.png";
 // import cn from "../assets/images/sponsors/coding ninjas.jpg";
 // import ds from "../assets/images/sponsors/Double-size-icon.jpg";
 // import jd from "../assets/images/sponsors/john deere.png";
@@ -15,15 +15,16 @@ export const sponsor = [
   // {
   //   image: Brahmos,
   // },
+  // {
+  //   image: coco,
+  // },
   {
     image: CISB,
   },
   // {
   //   image: Decathlon,
   // },
-  {
-    image: coco,
-  },
+ 
   // {
   //   image: cn,
   // },
