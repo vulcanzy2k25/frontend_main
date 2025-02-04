@@ -3,7 +3,10 @@ import { useEffect, useState } from "react";
 import gsap from "gsap";
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import sand from "../assets/images/nightEvents/sandart.jpg";
+import ls from '../assets/images/nightEvents/ls.png'
+import dj from '../assets/images/nightEvents/dj.jpg'
+import mbb from '../assets/images/nightEvents/mbb.png'
 gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
@@ -16,7 +19,7 @@ export default function App() {
       scrollTrigger: {
         trigger: con.current,
         scroller: "body",
-        start: "top -2%",
+        start: "top 0%",
         end: "top -300%",
         pin: true,
         // markers: true,
@@ -26,8 +29,8 @@ export default function App() {
           snapTo: "labels", // Automatically snap to each label in the horizontal scroll
           duration: 0.1, // Duration of snapping (smooth scroll effect)
           delay: 0, // Delay before snapping
-          ease: "power1.inOut" // Ease for the snapping effect
-        }
+          ease: "power1.inOut", // Ease for the snapping effect
+        },
       },
       transform: `translateX(${-(3 * windowWidth)}px)`,
       delay: 1,
@@ -56,38 +59,79 @@ export default function App() {
           {/* Sand Art Section */}
           <div
             style={{ width: windowWidth }}
-            className="box w-[200rem] h-[100vh] bg-orange-500 font-bold text-[5rem] flex justify-center items-center"
+            className=" box relative w-[200rem] h-[100vh] bg-orange-500 overflow-hidden font-bold text-[5rem] flex justify-center items-center"
           >
-            <p className="font-exo text-[15vw] md:text-[12vw] font-extrabold text-white">Sand Art</p>
-            <p className="absolute font-exo font-bold text-[5vw] md:text-[3vw] bottom-16 sm:bottom-3 text-white">Feb 6th</p>
+            <img
+              src={sand}
+              className="absolute opacity-70 top-0 h-full object-cover w-full"
+              loading="lazy"
+              alt=""
+            />
+            <p className="font-exo z-10 text-[15vw] md:text-[12vw] font-extrabold text-white">
+              Sand Art
+            </p>
+            <p className="absolute font-exo font-bold text-[5vw] md:text-[3vw] bottom-32 sm:bottom-3 text-white">
+              Feb 6th
+            </p>
           </div>
 
           {/* DJ Night Section */}
           <div
             style={{ width: windowWidth }}
-            className="box w-[200rem] h-[100vh] bg-orange-500 font-bold text-[5rem] flex justify-center items-center"
+            className="box relative overflow-hidden w-[200rem] h-[100vh] bg-[blue] font-bold text-[5rem] flex justify-center items-center"
           >
-           <p className="font-exo text-[15vw] md:text-[12vw] font-extrabold text-white">Laser Show</p>
-            <p className="absolute font-exo font-bold text-[5vw] md:text-[3vw] bottom-16 sm:bottom-3 text-white">Feb 7th</p>
-           </div>
+            <img
+              src={ls}
+              className="absolute opacity-70 top-0  object-cover h-full w-full"
+              loading="lazy"
+              alt=""
+            />
+
+            <p className="font-exo text-[15vw] md:text-[12vw] z-10 font-extrabold text-white">
+              Laser Show
+            </p>
+            <p className="absolute font-exo font-bold text-[5vw] md:text-[3vw] bottom-32 sm:bottom-3 text-white">
+              Feb 7th
+            </p>
+          </div>
 
           {/* Laser Show Section */}
           <div
             style={{ width: windowWidth }}
-            className="box w-[200rem] h-[100vh] bg-purple-700 font-bold text-[5rem] flex justify-center items-center text-white"
+            className="box relative overflow-hidden w-[200rem] h-[100vh] bg-black font-bold text-[5rem] flex justify-center items-center text-white"
           >
-           <p className="font-exo text-[15vw] md:text-[12vw] font-extrabold text-white">Meerake Band</p>
-            <p className="absolute font-exo font-bold text-[5vw] md:text-[3vw] bottom-16 sm:bottom-3 text-white">Feb 8th</p>
-           </div>
+            <img
+              src={mbb}
+              className="absolute  bottom-0 opacity-70 object-cover h-full w-full"
+              loading="lazy"
+              alt=""
+            />
+            <p className="font-exo text-[15vw] md:text-[12vw] z-10 font-extrabold text-white">
+              Merakee Band
+            </p>
+            <p className="absolute font-exo font-bold text-[5vw] md:text-[3vw]  px-5 w-full text-center bottom-32  sm:bottom-3 text-white">
+              Feb 8th
+            </p>
+          </div>
 
           {/* Band Section */}
           <div
             style={{ width: windowWidth }}
-            className="box w-[200rem] h-[100vh] bg-red-500 font-bold text-[5rem] flex justify-center items-center text-white"
+            className="box w-[200rem] h-[100vh] relative overflow-hidden bg-black font-bold text-[5rem] flex justify-center items-center text-white"
           >
-           <p className="font-exo text-[15vw] md:text-[12vw] font-extrabold text-white">DJ Xandrian</p>
-            <p className="absolute font-exo font-bold text-[5vw] md:text-[3vw] bottom-16 sm:bottom-3 text-white">Feb 8th</p>
-           </div>
+             <img
+              src={dj}
+              className="absolute opacity-80 top-0  object-cover h-full w-full"
+              loading="lazy"
+              alt=""
+            />
+            <p className="font-exo text-[15vw] md:text-[12vw] z-10 font-extrabold text-white">
+              DJ Night
+            </p>
+            <p className="absolute font-exo font-bold text-[5vw] md:text-[3vw] bottom-32 sm:bottom-3 text-white">
+              Feb 8th
+            </p>
+          </div>
         </div>
       </div>
     </div>

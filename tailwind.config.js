@@ -21,6 +21,7 @@ module.exports = {
        },
       backgroundImage: (theme) => ({
         "home": "url('/src/assets/images/home.png')",
+        "sand":"url('src/assets/images/nightEvents/sandart.jpg')"
       }),
     },
 

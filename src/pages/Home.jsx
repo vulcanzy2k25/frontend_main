@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import logo from "../assets/images/NITAP 1.svg";
-
+import SpEvents from '../components/SpEvents'
 export default function Home() {
   const { user } = useContext(AuthContext); // Get user from Context
 
@@ -38,6 +38,7 @@ export default function Home() {
           )}
         </div>
       </div>
+      <SpEvents/>
     </>
   );
 }
