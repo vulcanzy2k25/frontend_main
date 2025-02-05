@@ -15,7 +15,7 @@ export default function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useGSAP(() => {
-    gsap.to(first.current, {
+    const scrollTween= gsap.to(first.current, {
       scrollTrigger: {
         trigger: con.current,
         scroller: "body",
@@ -25,16 +25,94 @@ export default function App() {
         // markers: true,
         scrub: 0.5,
         anticipatePin: 1,
-        snap: {
-          snapTo: "labels", // Automatically snap to each label in the horizontal scroll
+        snap:  {
+          snapTo: 
+          "labels", // Automatically snap to each label in the horizontal scroll
           duration: 0.1, // Duration of snapping (smooth scroll effect)
           delay: 0, // Delay before snapping
           ease: "power1.inOut", // Ease for the snapping effect
-        },
+        }
       },
       transform: `translateX(${-(3 * windowWidth)}px)`,
       delay: 1,
     });
+
+    gsap.fromTo(
+      ".sand",{
+        y:50,
+        scale:0.5
+      },{
+        y:0,
+        scale:1,
+        scrollTrigger:{
+          trigger:'.box1',
+          // markers:true,
+          scrub:1,
+          start: "top 90%",
+          end:"bottom 0%"
+        }
+      }
+    )
+    gsap.fromTo(
+      ".ls",{
+        y:50,
+        opacity:0,
+        scale:0.8
+      },{
+        y:0,
+        scale:1,
+        opacity:1,
+        scrollTrigger:{
+          trigger:'.box2',
+          // markers:true,
+          containerAnimation:scrollTween,
+          horizontal:true,
+          scrub:1,
+          start: "left 100%",
+          end:"left 60%  ",
+        }
+      }
+    )
+    gsap.fromTo(
+      ".mb",{
+        y:50,
+        opacity:0,
+        scale:0.8
+      },{
+        y:0,
+        scale:1,
+        opacity:1,
+        scrollTrigger:{
+          trigger:'.box3',
+          // markers:true,
+          containerAnimation:scrollTween,
+          horizontal:true,
+          scrub:1,
+          start: "left 120%",
+          end:"left 80%  ",
+        }
+      }
+    )
+    gsap.fromTo(
+      ".dj",{
+        y:50,
+        opacity:0,
+        scale:0.8
+      },{
+        y:0,
+        scale:1,
+        opacity:1,
+        scrollTrigger:{
+          trigger:'.box4',
+          // markers:true,
+          containerAnimation:scrollTween,
+          horizontal:true,
+          scrub:1,
+          start: "left 120%",
+          end:"left 80%  ",
+        }
+      }
+    )
   }, [windowWidth]);
 
   useEffect(() => {
@@ -60,7 +138,8 @@ export default function App() {
           {/* Sand Art Section */}
           <div
             style={{ width: windowWidth }}
-            className=" box relative w-[200rem] h-[100vh] bg-orange-500 overflow-hidden font-bold text-[5rem] flex justify-center items-center"
+
+            className="box1 box relative w-[200rem] h-[100vh] bg-orange-500 overflow-hidden font-bold text-[5rem] flex justify-center items-center"
           >
             <img
               src={sand}
@@ -68,10 +147,10 @@ export default function App() {
               loading="lazy"
               alt=""
             />
-            <p className="font-dune z-10 text-[12vw]  md:text-[10vw] font-extrabold text-white">
+            <p className="sand font-dune z-10 text-[12vw]  md:text-[10vw] font-extrabold text-white">
               SAND ART
             </p>
-            <p className="absolute font-dune font-bold text-[5vw] md:text-[3vw] bottom-32 sm:bottom-3 text-white">
+            <p className=" absolute font-dune font-bold text-[5vw] md:text-[3vw] bottom-32 sm:bottom-3 text-white">
               Feb 6th
             </p>
           </div>
@@ -79,7 +158,7 @@ export default function App() {
           {/* DJ Night Section */}
           <div
             style={{ width: windowWidth }}
-            className="box relative overflow-hidden w-[200rem] h-[100vh] bg-[blue] font-bold text-[5rem] flex justify-center items-center"
+            className="box2 box relative overflow-hidden w-[200rem] h-[100vh] bg-[blue] font-bold text-[5rem] flex justify-center items-center"
           >
             <img
               src={ls}
@@ -88,7 +167,7 @@ export default function App() {
               alt=""
             />
 
-            <p className="font-altroned text-[10vw] md:text-[10vw] z-10 font-extrabold text-white">
+            <p className="ls font-altroned text-[10vw] md:text-[10vw] z-10 font-extrabold text-white">
               LASER SHOW
             </p>
             <p className="absolute font-altroned font-bold text-[5vw] md:text-[3vw] bottom-32 sm:bottom-3 text-white">
@@ -99,7 +178,7 @@ export default function App() {
           {/* Laser Show Section */}
           <div
             style={{ width: windowWidth }}
-            className="box relative overflow-hidden w-[200rem] h-[100vh] bg-black font-bold text-[5rem] flex justify-center items-center text-white"
+            className="box3 box relative overflow-hidden w-[200rem] h-[100vh] bg-black font-bold text-[5rem] flex justify-center items-center text-white"
           >
             <img
               src={mbb}
@@ -107,7 +186,7 @@ export default function App() {
               loading="lazy"
               alt=""
             />
-            <p className="font-exo text-[15vw] md:text-[12vw] z-10 font-extrabold text-white">
+            <p className="mb font-exo text-[15vw] md:text-[12vw] z-10 font-extrabold text-white">
               Merakee Band
             </p>
             <p className="absolute font-exo font-bold text-[5vw] md:text-[3vw]  px-5 w-full text-center bottom-32  sm:bottom-3 text-white">
@@ -118,7 +197,7 @@ export default function App() {
           {/* Band Section */}
           <div
             style={{ width: windowWidth }}
-            className="box w-[200rem] h-[100vh] relative overflow-hidden bg-black font-bold text-[5rem] flex justify-center items-center text-white"
+            className="box4 box w-[200rem] h-[100vh] relative overflow-hidden bg-black font-bold text-[5rem] flex justify-center items-center text-white"
           >
              <img
               src={dj}
@@ -126,7 +205,7 @@ export default function App() {
               loading="lazy"
               alt=""
             />
-            <p className="font-vorcas text-[12vw] md:text-[12vw] z-10 font-extrabold text-white">
+            <p className="dj font-vorcas text-[12vw] md:text-[12vw] z-10 font-extrabold text-white">
               DJ NIGHT
             </p>
             <p className="absolute font-vorcas font-bold text-[5vw] md:text-[3vw] bottom-32 sm:bottom-3 text-white">
