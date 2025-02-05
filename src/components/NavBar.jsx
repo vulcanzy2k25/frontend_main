@@ -11,13 +11,13 @@ export default function NavBar() {
   const location = useLocation();
 
   const navItems = [
-    { name: "Home", path: "/", icon: <GoHomeFill size={30} /> },
-    // { name: "Events", path: "/events", icon: <BsCalendar3EventFill size={30} /> },
-    { name: "Stay", path: "/stay", icon: <FaBed size={30} /> },
-    { name: "Gallery", path: "/gallery", icon: <MdPhotoSizeSelectActual size={30} /> },
-    { name: "Sponsors", path: "/sponsors", icon: <FaHandshakeAngle size={30} /> },
-    { name: "Team", path: "/team", icon: <HiUserGroup size={30} /> },
-    { name: "Profile", path: "/profile", icon: <FaUser size={30} /> },
+    { name: "Home", path: "/", icon: <GoHomeFill size={25} /> },
+    // { name: "Events", path: "/events", icon: <BsCalendar3EventFill size={20} /> },
+    { name: "Stay", path: "/stay", icon: <FaBed size={25} /> },
+    { name: "Gallery", path: "/gallery", icon: <MdPhotoSizeSelectActual size={25} /> },
+    { name: "Sponsors", path: "/sponsors", icon: <FaHandshakeAngle size={25} /> },
+    { name: "Team", path: "/team", icon: <HiUserGroup size={25} /> },
+    { name: "Profile", path: "/profile", icon: <FaUser size={22} /> },
   ];
 
   return (

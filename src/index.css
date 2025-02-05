@@ -1,20 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Fontdiner+Swanky&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Fontdiner+Swanky&family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Fontdiner+Swanky&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Fontdiner+Swanky&family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap");
 
-@font-face{
-  font-family:"Fredoka";
+@font-face {
+  font-family: "Fredoka";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Fontdiner Swanky';
+  font-family: "Fontdiner Swanky";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -22,7 +22,7 @@
 }
 
 @font-face {
-  font-family: 'syne';
+  font-family: "syne";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -30,39 +30,43 @@
 }
 
 @font-face {
-  font-family: 'exo';
+  font-family: "exo";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
   /* src: url('https://fonts.gstatic.com/s/syne/v1/8QIQdiG5jN0pJZ8rIcA.woff2') format('woff2'); */
 }
 
-
+@font-face {
+  font-family: "dune";
+  src: url("assets/fonts/Dune_Rise.ttf");
+}
+@font-face {
+  font-family: "altroned";
+  src: url("assets/fonts/altroned-trial.regular.ttf");
+}
+@font-face {
+  font-family: "vorcas";
+  src: url("assets/fonts/vorcas.otf");
+}
 @layer base {
-
   @font-face {
     font-family: "title";
     src: url("assets/fonts/fedOne.ttf");
   }
 }
 
-.title{
+.title {
   /* -webkit-text-stroke-width: 0.09rem;
   -webkit-text-stroke-color: #EBE6D0;
   color:#000000; */
   position: relative;
-  text-shadow: 
-    1px 1px 0 #000000,
-    -1px 1px 0 #000000,
-    1px -1px 0 #000000,
-    -1px -1px 0 #EBE6D0,
-    2px 2px 0 #ff9100,
-    -2px 2px 0 #EBE6D0,
-    2px -2px 0 #000000,
-    -2px -2px 0 #ff9100;
+  text-shadow: 1px 1px 0 #000000, -1px 1px 0 #000000, 1px -1px 0 #000000,
+    -1px -1px 0 #ebe6d0, 2px 2px 0 #ff9100, -2px 2px 0 #ebe6d0,
+    2px -2px 0 #000000, -2px -2px 0 #ff9100;
 }
 
-.sponsor-image{
+.sponsor-image {
   aspect-ratio: 2/1;
   object-fit: contain;
 }

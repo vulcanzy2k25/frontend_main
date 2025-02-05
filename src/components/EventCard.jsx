@@ -3,8 +3,9 @@ import { FaRegCalendarAlt, FaExternalLinkAlt } from "react-icons/fa";
 import { GoLocation } from "react-icons/go";
 import { register } from "../services/operations/userAPI";
 import { toast } from "react-hot-toast";
+import { Link } from "react-router-dom";
 
-export default function EventCard({ _id, image, description, date, location }) {
+export default function EventCard({ _id, name, image, description, date, location }) {
   const handleRegister = async () => {
     const token = localStorage.getItem("token"); // Fetch token from localStorage  
     if (!token) {
@@ -21,21 +22,29 @@ export default function EventCard({ _id, image, description, date, location }) {
 
       {/* Event Details */}
       <div className="p-4 flex flex-col gap-3">
+        {/* Event Name */}
+        <p className="text-title font-exo text-lg font-bold">{name}</p>
+
         {/* Description */}
         <p className="text-white text-sm leading-tight">
-          {description.length > 60 ? `${description.substring(0, 60)}...` : description}
-          <span className="text-title pl-2 cursor-pointer hover:underline"> Read more</span>
+          {description.length > 60 ? `${description.substring(0, 40)}...` : description}
+          <Link 
+            to={'/event'} 
+            state={{_id, name, image, description, date, location}} 
+            className="text-title pl-2 cursor-pointer hover:underline">
+            Read more
+          </Link>
         </p>
 
         {/* Date & Location */}
         <div className="flex gap-2 justify-between items-center">
           <div className="bg-white flex rounded-lg px-3 py-2 gap-2 items-center">
             <FaRegCalendarAlt size={20} />
-            <p className="font-medium text-sm">{date || "TBA"}</p>
+            <p className="font-medium text-xs">{date || "TBA"}</p>
           </div>
           <div className="bg-white flex rounded-lg px-3 py-2 gap-2 items-center">
             <GoLocation size={20} />
-            <p className="font-medium text-sm">{location || "Unknown"}</p>
+            <p className="font-medium text-xs">{location || "Unknown"}</p>
           </div>
         </div>
 

@@ -68,10 +68,10 @@ export default function App() {
               loading="lazy"
               alt=""
             />
-            <p className="font-exo z-10 text-[15vw] md:text-[12vw] font-extrabold text-white">
-              Sand Art
+            <p className="font-dune z-10 text-[12vw]  md:text-[10vw] font-extrabold text-white">
+              SAND ART
             </p>
-            <p className="absolute font-exo font-bold text-[5vw] md:text-[3vw] bottom-32 sm:bottom-3 text-white">
+            <p className="absolute font-dune font-bold text-[5vw] md:text-[3vw] bottom-32 sm:bottom-3 text-white">
               Feb 6th
             </p>
           </div>
@@ -88,10 +88,10 @@ export default function App() {
               alt=""
             />
 
-            <p className="font-exo text-[15vw] md:text-[12vw] z-10 font-extrabold text-white">
-              Laser Show
+            <p className="font-altroned text-[10vw] md:text-[10vw] z-10 font-extrabold text-white">
+              LASER SHOW
             </p>
-            <p className="absolute font-exo font-bold text-[5vw] md:text-[3vw] bottom-32 sm:bottom-3 text-white">
+            <p className="absolute font-altroned font-bold text-[5vw] md:text-[3vw] bottom-32 sm:bottom-3 text-white">
               Feb 7th
             </p>
           </div>
@@ -126,10 +126,10 @@ export default function App() {
               loading="lazy"
               alt=""
             />
-            <p className="font-exo text-[15vw] md:text-[12vw] z-10 font-extrabold text-white">
-              DJ Night
+            <p className="font-vorcas text-[12vw] md:text-[12vw] z-10 font-extrabold text-white">
+              DJ NIGHT
             </p>
-            <p className="absolute font-exo font-bold text-[5vw] md:text-[3vw] bottom-32 sm:bottom-3 text-white">
+            <p className="absolute font-vorcas font-bold text-[5vw] md:text-[3vw] bottom-32 sm:bottom-3 text-white">
               Feb 8th
             </p>
           </div>

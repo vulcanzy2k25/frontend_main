@@ -70,14 +70,19 @@ export default function Profile() {
         </p>
 
         <div className="flex flex-wrap justify-center gap-2">
+          {/* <Link to={"/updateProfile"}>
+            <button className="bg-title text-black font-exo font-medium w-[12rem] py-3 rounded-xl hover:bg-title/80">
+              Registered Events
+            </button>
+          </Link> */}
           <Link to={"/updateProfile"}>
-            <button className="bg-title w-[12rem] py-3 rounded-xl hover:bg-title/80">
+            <button className="bg-title w-[12rem] py-3 rounded-xl text-black font-exo font-medium hover:bg-title/80">
               Update Profile
             </button>
           </Link>
           <button
             onClick={() => logout(navigate)}
-            className="bg-orange-600 w-[12rem] py-3 rounded-xl hover:bg-orange-500"
+            className="bg-orange-600  w-[12rem] py-3 rounded-xl hover:bg-orange-500"
           >
             Sign Out
           </button>

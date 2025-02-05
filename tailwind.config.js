@@ -18,6 +18,9 @@ module.exports = {
         exo:["exo","sans-serif"],     
         header:["Fontdiner Swanky","sans-serif"],     
         fredoka:["Fredoka","sans-serif"],     
+        dune:["dune","sans-serif"],    
+        altroned:["altroned","sans-serif"],    
+        vorcas:["vorcas","sans-serif"],    
        },
       backgroundImage: (theme) => ({
         "home": "url('/src/assets/images/home.png')",

@@ -11,6 +11,7 @@ import OAuthCallback from "./pages/OAuthCallback";
 import { Navigate } from "react-router-dom";
 import UpdateProfile from "./pages/UpdateProfile";
 import Profile from "./pages/Profile";
+// import Event from "./pages/Event";
 const routes = [
   {
     path: "/",
@@ -22,6 +23,7 @@ const routes = [
       { path: "/gallery", element: <Gallery /> },
       { path: "/sponsors", element: <Sponsors /> },
       { path: "/team", element: <Team /> },
+      // { path: "/event", element: <Event /> },
       {path: "/login", element: <Login />},
       {path: "/profile", element: <Profile />},
       {path: "/updateProfile", element: <UpdateProfile />},

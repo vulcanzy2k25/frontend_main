@@ -1,9 +1,14 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Route, Routes } from "react-router-dom";
 import routes from "./routes";
 import { AuthProvider } from "./context/AuthContext";
-
+import { useLocation } from "react-router-dom";
 function App() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]); // Runs on every route change
+
   return (
     <AuthProvider>
       <Routes>
