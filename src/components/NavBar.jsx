@@ -1,6 +1,6 @@
 import React from "react";
 import { GoHomeFill } from "react-icons/go";
-// import { BsCalendar3EventFill } from "react-icons/bs";
+import { BsCalendar3EventFill } from "react-icons/bs";
 import { FaBed } from "react-icons/fa6";
 import { MdPhotoSizeSelectActual } from "react-icons/md";
 import { FaHandshakeAngle } from "react-icons/fa6";
@@ -12,7 +12,7 @@ export default function NavBar() {
 
   const navItems = [
     { name: "Home", path: "/", icon: <GoHomeFill size={25} /> },
-    // { name: "Events", path: "/events", icon: <BsCalendar3EventFill size={20} /> },
+    { name: "Events", path: "/events", icon: <BsCalendar3EventFill size={20} /> },
     { name: "Stay", path: "/stay", icon: <FaBed size={25} /> },
     { name: "Gallery", path: "/gallery", icon: <MdPhotoSizeSelectActual size={25} /> },
     { name: "Sponsors", path: "/sponsors", icon: <FaHandshakeAngle size={25} /> },

@@ -2,11 +2,11 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { GoLocation } from "react-icons/go";
-import { register } from "../services/operations/userAPI";
-import toast from "react-hot-toast";
+// import { register } from "../services/operations/userAPI";
+// import toast from "react-hot-toast";
 import { TiArrowBack } from "react-icons/ti";
 import { useNavigate } from "react-router-dom";
-import { FaExternalLinkAlt } from "react-icons/fa";
+// import { FaExternalLinkAlt } from "react-icons/fa";
 export default function EventPage() {
     const navigate=useNavigate()
   const location = useLocation();
@@ -25,14 +25,14 @@ export default function EventPage() {
       </div>
     );
   }
-  const handleRegister = async () => {
-    const token = localStorage.getItem("token"); // Fetch token from localStorage
-    if (!token) {
-      toast.error("Please log in to register for the event.");
-      return;
-    }
-    await register(_id, token);
-  };
+  // const handleRegister = async () => {
+  //   const token = localStorage.getItem("token"); // Fetch token from localStorage
+  //   if (!token) {
+  //     toast.error("Please log in to register for the event.");
+  //     return;
+  //   }
+  //   await register(_id, token);
+  // };
 
   return (
     <div className="min-h-screen relative pb-5 bg-gradient-to-b from-black place-items-center to-[#120226] grid grid-cols-1 md:grid-cols-2 sm:pl-28 items-center text-white p-5">
@@ -62,12 +62,12 @@ export default function EventPage() {
             <GoLocation size={20} />
             <p className="font-medium text-sm">{eventLocation || "Unknown"}</p>
           </div>
-          <button
+          {/* <button
             onClick={handleRegister}
             className="bg-white text-black font-medium py-2 flex justify-center rounded-lg text-lg gap-2 w-full items-center hover:bg-gray-200 transition"
           >
             Register <FaExternalLinkAlt />
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

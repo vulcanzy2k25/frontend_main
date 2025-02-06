@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "./components/Layout"; // Ensure the correct import
 import Home from "./pages/Home";
-// import Events from "./pages/Events";
+import Events from "./pages/Events";
 import Stay from "./pages/Stay";
 import Gallery from "./pages/Gallery";
 import Sponsors from "./pages/Sponsors";
@@ -11,19 +11,19 @@ import OAuthCallback from "./pages/OAuthCallback";
 import { Navigate } from "react-router-dom";
 import UpdateProfile from "./pages/UpdateProfile";
 import Profile from "./pages/Profile";
-// import Event from "./pages/Event";
+import Event from "./pages/Event";
 const routes = [
   {
     path: "/",
     element: <Layout />, // Wrap all routes inside Layout
     children: [
       { path: "/", element: <Home /> },
-      // { path: "/events", element: <Events /> },
+      { path: "/events", element: <Events /> },
       { path: "/stay", element: <Stay /> },
       { path: "/gallery", element: <Gallery /> },
       { path: "/sponsors", element: <Sponsors /> },
       { path: "/team", element: <Team /> },
-      // { path: "/event", element: <Event /> },
+      { path: "/event", element: <Event /> },
       {path: "/login", element: <Login />},
       {path: "/profile", element: <Profile />},
       {path: "/updateProfile", element: <UpdateProfile />},
