@@ -20,6 +20,7 @@ import c4a from "../assets/images/gallery/c4a-min.JPG";
 import c4b from "../assets/images/gallery/c4b-min.JPG";
 const images = [c1,c1a,c1b,c1c]; 
 const images1=[c2,c2a,c2b,c2c]// Add more images as needed
+const images4=[c2a,c4a,c4,c3e]// Add more images as needed
 const images2=[c3,c3a,c3b,c3c,c3d,c3e]// Add more images as needed
 const images3=[c4,c4a,c4b]// Add more images as needed
 export default function Gallery() {
@@ -38,10 +39,30 @@ export default function Gallery() {
             <Carousal images={images2} />
             <div className="grid gap-2 grid-cols-2">
               <Carousal images={images3} />
-              <Carousal images={images1} />
+              <Carousal images={images4} />
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex gap-3 flex-wrap items-center justify-center">
+        <a href="https://www.instagram.com/vulcanzy_2k25/">
+
+        <button className="py-3 font-semibold rounded-md bg-title px-2 font-syne">
+          Instagram
+        </button>
+        </a>
+        <a href="https://vulcanzy-2024.vercel.app/">
+
+        <button className="py-3 font-semibold rounded-md bg-title px-2 font-syne">
+          Vulcanzy 2024
+        </button>
+        </a>
+        <a href="https://vulcanzy-2023.vercel.app/">
+
+        <button className="py-3 font-semibold rounded-md bg-title px-2 font-syne">
+          Vulcanzy 2023
+        </button>
+        </a>
       </div>
     </div>
   );
