@@ -70,11 +70,11 @@ export default function Profile() {
         </p>
 
         <div className="flex flex-wrap justify-center gap-2">
-          {/* <Link to={"/updateProfile"}>
+          <Link to={"/regEvents"}>
             <button className="bg-title text-black font-exo font-medium w-[12rem] py-3 rounded-xl hover:bg-title/80">
               Registered Events
             </button>
-          </Link> */}
+          </Link>
           <Link to={"/updateProfile"}>
             <button className="bg-title w-[12rem] py-3 rounded-xl text-black font-exo font-medium hover:bg-title/80">
               Update Profile

@@ -1,7 +1,7 @@
 import { APIconnector } from "../APIconnector";
 import { userEndpoints } from "../APIs";
 import toast from "react-hot-toast";
-const {REGISTER_API,EVENTS_API,UPDATE,GET_USER_API,LOGOUT_API}=userEndpoints
+const {REGISTER_API,EVENTS_API,UPDATE,GET_USER_API,LOGOUT_API,REG_EVENTS}=userEndpoints
 
 export async function register(eventId, token) {
     const toastId = toast.loading("Please wait...");
@@ -95,6 +95,29 @@ export async function logout(navigate) {
     navigate("/login");
   } catch (error) {
     toast.error(error.response?.data?.message || "Logout failed!");
+  } finally {
+    toast.dismiss(toastId);
+  }
+}
+
+
+export async function getRegisteredEvents(token) {
+  const toastId = toast.loading("Fetching your registered events...");
+
+  try {
+    const response = await APIconnector("GET", REG_EVENTS, null, {
+      Authorization: `Bearer ${token}`,
+    });
+
+    if (!response.data.success) {
+      throw new Error(response.data.message);
+    }
+
+    toast.success("Registered events fetched successfully!");
+    return response.data.data; // Returning the list of registered events
+  } catch (error) {
+    toast.error(error.response?.data?.message || "Could not fetch registered events");
+    return []; // Return an empty array in case of an error
   } finally {
     toast.dismiss(toastId);
   }

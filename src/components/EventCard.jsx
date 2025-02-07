@@ -1,19 +1,23 @@
 import React from "react";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { GoLocation } from "react-icons/go";
-// import { register } from "../services/operations/userAPI";
-// import { toast } from "react-hot-toast";
+import { register } from "../services/operations/userAPI";
+import { toast } from "react-hot-toast";
 import { Link } from "react-router-dom";
-
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { useLocation } from "react-router-dom";
 export default function EventCard({ _id, name, image, description, date, location }) {
-  // const handleRegister = async () => {
-  //   const token = localStorage.getItem("token"); // Fetch token from localStorage  
-  //   if (!token) {
-  //     toast.error("Please log in to register for the event.");
-  //     return;
-  //   }
-  //   await register(_id, token);
-  // };
+  const plocation = useLocation();
+  const hideRegister=["/regEvents"]
+  const shouldShowNavBar = !hideRegister.includes(plocation.pathname);
+  const handleRegister = async () => {
+    const token = localStorage.getItem("token"); // Fetch token from localStorage  
+    if (!token) {
+      toast.error("Please log in to register for the event.");
+      return;
+    }
+    await register(_id, token);
+  };
 
   return (
     <div className="w-[18rem] h-max rounded-xl border border-title overflow-hidden shadow-lg">
@@ -49,12 +53,14 @@ export default function EventCard({ _id, name, image, description, date, locatio
         </div>
 
         {/* Register Button */}
-        {/* <button
-          onClick={handleRegister}
-          className="bg-white font-medium py-2 flex justify-center rounded-lg text-lg gap-2 items-center hover:bg-gray-200 transition"
+        {shouldShowNavBar&&
+        <button
+        onClick={handleRegister}
+        className="bg-white font-medium py-2 flex justify-center rounded-lg text-lg gap-2 items-center hover:bg-gray-200 transition"
         >
           Register <FaExternalLinkAlt />
-        </button> */}
+        </button>
+        }
       </div>
     </div>
   );

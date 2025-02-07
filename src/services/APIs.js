@@ -11,6 +11,7 @@ export const userEndpoints={
   EVENTS_API:BASE_URL+"event/getAllEvents",
   UPDATE:BASE_URL+"user/editUser",
   GET_USER_API:BASE_URL+"user/getUser",
-  LOGOUT_API:BASE_URL+"auth/logout"
+  LOGOUT_API:BASE_URL+"auth/logout",
+  REG_EVENTS:BASE_URL+"user/registeredEvents"
 }
 

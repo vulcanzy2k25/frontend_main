@@ -6,7 +6,7 @@ export default function Layout() {
   const location = useLocation();
 
   // Define routes where the navbar should NOT be displayed
-  const hideNavBarRoutes = ["/login", "/auth/callback" ,"/updateProfile","/event"];
+  const hideNavBarRoutes = ["/login", "/auth/callback" ,"/updateProfile","/event","/regEvents"];
   const shouldShowNavBar = !hideNavBarRoutes.includes(location.pathname);
 
   return (
